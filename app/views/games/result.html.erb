@@ -1,0 +1,8 @@
+<div class="result-container">
+  <h3>Your attempt was '<%= @answer %>'</h3>
+  <p><%= @result %></p>
+  <p>This guess was worth <%= @answer.length %> points</p>
+
+  <p>Your total score is <%= @total_score %></p>
+  <%= link_to "Try again!", game_path %>
+</div>

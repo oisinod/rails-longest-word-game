@@ -1,0 +1,16 @@
+<div class="container ">
+  <div class="d-flex flex-column align-items-center">
+    <h1 class="">Here are your letters:</h1>
+    <ul class="p-0">
+    <% @letters.each do |letter| %>
+      <li class='btn btn-primary'><%= letter %></li>
+      <% end %>
+    </ul>
+    <form action="result" >
+      <input type="text" name="attempt">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @letters %>
+      <input type="submit" value="Submit your answer!">
+    </form>
+  </div>
+</div>
